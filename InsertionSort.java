@@ -1,19 +1,14 @@
 public class InsertionSort {
 
     public static void insertionSort(int[] arr) {
-        for (int i = 1; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) { // start with second element assuminig first is sorrted
             int key = arr[i];
             int j = i - 1;
-
-            while (j >= 0 && arr[j] > key) {
-                System.out.print("      inside  " + i + "itteration-->");
-                printArray(arr);
+            while (j >= 0 && arr[j] < key) {
                 arr[j + 1] = arr[j];
-                j = j - 1;
+                j--;
             }
-            arr[j + 1] = key;
-            System.out.print("after" + i + "itteration-->");
-            printArray(arr);
+            arr[j+1] = key;
         }
     }
 

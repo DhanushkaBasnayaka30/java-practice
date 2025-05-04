@@ -21,10 +21,12 @@ public class MergeSort {
     int[] left_arr = new int[n1];
     int[] right_arr = new int[n2];
 
+    // copy data to left array
     for (int i = 0; i < n1; i++) {
       left_arr[i] = A[left + i];
     }
 
+    //copy data to right array
     for (int j = 0; j < n2; j++) {
       right_arr[j] = A[mid_point + 1 + j];
 
